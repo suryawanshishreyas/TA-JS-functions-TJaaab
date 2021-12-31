@@ -1,25 +1,41 @@
-/*
-1. Create a function named `sayHello` that alerts a message `Hello World!`.
-*/
+// /*
+// 1. Create a function named `sayHello` that alerts a message `Hello World!`.
+// */
+function sayHello(){
+  alert("Hello World!");
+}
+sayHello();
 
-/*
-2. Create a function named `fullName` with the following steps:
+// /*
+// 2. Create a function named `fullName` with the following steps:
 
-  - Prompts a message saying `Enter your first name` and store the value into variable named `firstName`
-  - Prompts a message saying `Enter your last name` and store the value into variable named `lastName`
-  - Concat the value of fistName and lastName and store it in another variable named `fullName`.
-  - Alert `fullName`
-*/
+//   - Prompts a message saying `Enter your first name` and store the value into variable named `firstName`
+//   - Prompts a message saying `Enter your last name` and store the value into variable named `lastName`
+//   - Concat the value of fistName and lastName and store it in another variable named `fullName`.
+//   - Alert `fullName`
+// */
+function fullName() {
+  firstName=prompt("Enter your first name");
+  lastName=prompt("Enter your last name");
+  fullName= firstName + " " + lastName;
+  alert(fullName);
+}
+fullName();
+// /*
+// 3. Create a function named `addTwoNumbers` with the following steps:
 
-/*
-3. Create a function named `addTwoNumbers` with the following steps:
-
-  - Prompts a message saying `Enter the first number` and store the value into variable named `firstNum`
-  - Prompts a message saying `Enter the second` and store the value into variable named `secondNum`
-  - Add the value of firstNum and secondNum and store it in another variable named `sum`.
-  - Alert `sum`
-*/
-
+//   - Prompts a message saying `Enter the first number` and store the value into variable named `firstNum`
+//   - Prompts a message saying `Enter the second` and store the value into variable named `secondNum`
+//   - Add the value of firstNum and secondNum and store it in another variable named `sum`.
+//   - Alert `sum`
+// */
+function addTwoNumbers(){
+  firstNum= +prompt("Enter the first value");
+  secondNum= +prompt("Enter the second number");
+  sum = firstNum + secondNum ;
+  alert(sum);
+}
+addTwoNumbers();
 /*
 4. Create a function named `getTable` with the following steps:
 
@@ -38,14 +54,33 @@
   9 * 9 = 81
   9 * 10 = 90
 */
-
+let num= +prompt(`Enter a number`);
+let i=1;
+let mul;
+function getTable(){
+  while(i<=10){
+   mul= num * i; 
+  }
+  i++;
+}
+console.log(`${num} * ${i} = ${mul}`);
+getTable();
 /*
 5. Create a function named `isLeapYear` with the following steps:
 
   - Prompts a message saying `Enter a year` and store the value into variable named`year`
   - Alert `[year] is a leap year` otherwise `[year] is not a leap year`
 */
-
+function isLeapYear(){
+  let year=+prompt(`Enter a year`);
+  if(year%4==0){
+    alert(`${year} is a leap year`);
+  }
+  else{
+    alert(`${year} is not a leap year`);
+  }
+}
+isLeapYear();
 /*
 6. Create a function named `getFactorial` with the following steps:
 
@@ -53,3 +88,18 @@
   - Alert `The factorial of [number] is [factorial]`
 
 */
+function getFactorial(){
+  let number=+prompt("Enter a number");
+  let fact;
+  if(number==0 || number==1){
+    alert(`The Factorial of ${number} is 1`);
+  }
+  else{
+    for(var i=number; i>=1; i--){
+      fact=Number(number *(number-1)) ;
+    }
+    alert(`The factorial of ${number} is ${fact}`);
+  }
+
+}
+getFactorial();
