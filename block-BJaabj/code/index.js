@@ -1,8 +1,10 @@
 // /*
 // 1. Create a function named `sayHello` that alerts a message `Hello World!`.
 // */
+i=1;
 function sayHello(){
   alert("Hello World!");
+  console.log(i);
 }
 sayHello();
 
